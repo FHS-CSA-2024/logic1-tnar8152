@@ -1,0 +1,220 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: old35Test
+      id: old35test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: old35Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.old35Test
+        timeout: 10
+        max-score: 2
+    - name: specialElevenTest
+      id: specialElevenTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: specialElevenTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.specialElevenTest
+        timeout: 10
+        max-score: 2
+    - name: more20Test
+      id: more20Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: more20Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.more20Test
+        timeout: 10
+        max-score: 2
+    - name: less20Test
+      id: less20Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: less20Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.less20Test
+        timeout: 10
+        max-score: 2
+    - name: nearTenTest
+      id: nearTenTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: nearTenTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.nearTenTest
+        timeout: 10
+        max-score: 2
+    - name: sortaSumTest
+      id: sortaSumTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sortaSumTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.sortaSumTest
+        timeout: 10
+        max-score: 2
+    - name: in1To10Test
+      id: in1To10Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: in1To10Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.in1To10Test
+        timeout: 10
+        max-score: 2
+    - name: teenSumTest
+      id: teenSumTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: teenSumTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.teenSumTest
+        timeout: 10
+        max-score: 2
+    - name: love6Test
+      id: love6Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: love6Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.love6Test
+        timeout: 10
+        max-score: 2
+    - name: lastDigitTest
+      id: lastDigitTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: lastDigitTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.lastDigitTest
+        timeout: 10
+        max-score: 2
+    - name: answerCellTest
+      id: answerCellTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: answerCellTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.answerCellTest
+        timeout: 10
+        max-score: 2
+    - name: alarmClockTest
+      id: alarmClockTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: alarmClockTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.alarmClockTest
+        timeout: 10
+        max-score: 2
+    - name: teaPartyTest
+      id: teaPartyTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: teaPartyTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.teaPartyTest
+        timeout: 10
+        max-score: 2
+    - name: redTicketTest
+      id: redTicketTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: redTicketTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.redTicketTest
+        timeout: 10
+        max-score: 2
+    - name: greenTicketTest
+      id: greenTicketTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: greenTicketTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.greenTicketTest
+        timeout: 10
+        max-score: 2
+    - name: squirrelPlayTest
+      id: squirrelPlayTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: squirrelPlayTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.squirrelPlayTest
+        timeout: 10
+        max-score: 2
+    - name: caughtSpeedingTest
+      id: caughtSpeedingTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: caughtSpeedingTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.caughtSpeedingTest
+        timeout: 10
+        max-score: 2
+    - name: dateFashionTest
+      id: dateFashionTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: dateFashionTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.dateFashionTest
+        timeout: 10
+        max-score: 2
+    - name: fizzString2Test
+      id: fizzString2Test
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: fizzString2Test
+        setup-command: ''
+        command: gradle test --tests TestLogic1.fizzString2Test
+        timeout: 10
+        max-score: 2
+    - name: sodaPartyTest
+      id: sodaPartyTest
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sodaPartyTest
+        setup-command: ''
+        command: gradle test --tests TestLogic1.sodaPartyTest
+        timeout: 10
+        max-score: 2
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        OLD35TEST_RESULTS: "${{steps.old35Test.outputs.result}}"
+        SPECIALELEVENTEST_RESULTS: "${{steps.specialElevenTest.outputs.result}}"
+        MORE20TEST_RESULTS: "${{steps.more20Test.outputs.result}}"
+        LESS20TEST_RESULTS: "${{steps.less20Test.outputs.result}}"
+        NEARTENTEST_RESULTS: "${{steps.nearTenTest.outputs.result}}"
+        SORTASUMTEST_RESULTS: "${{steps.sortaSumTest.outputs.result}}"
+        IN1TO10TEST_RESULTS: "${{steps.in1To10Test.outputs.result}}"
+        TEENSUMTEST_RESULTS: "${{steps.teenSumTest.outputs.result}}"
+        LOVE6TEST_RESULTS: "${{steps.love6Test.outputs.result}}"
+        LASTDIGITTEST_RESULTS: "${{steps.lastDigitTest.outputs.result}}"
+        ANSWERCELLTEST_RESULTS: "${{steps.answerCellTest.outputs.result}}"
+        ALARMCLOCKTEST_RESULTS: "${{steps.alarmClockTest.outputs.result}}"
+        TEAPARTYTEST_RESULTS: "${{steps.teaPartyTest.outputs.result}}"
+        REDTICKETTEST_RESULTS: "${{steps.redTicketTest.outputs.result}}"
+        GREENTICKETTEST_RESULTS: "${{steps.greenTicketTest.outputs.result}}"
+        SQUIRRELPLAYTEST_RESULTS: "${{steps.squirrelPlayTest.outputs.result}}"
+        CAUGHTSPEEDINGTEST_RESULTS: "${{steps.caughtSpeedingTest.outputs.result}}"
+        DATEFASHIONTEST_RESULTS: "${{steps.dateFashionTest.outputs.result}}"
+        FIZZSTRING2TEST_RESULTS: "${{steps.fizzString2Test.outputs.result}}"
+        SODAPARTYTEST_RESULTS: "${{steps.sodaPartyTest.outputs.result}}"
+      with:
+        runners: old35Test,specialElevenTest,more20Test,less20Test,nearTenTest,sortaSumTest,in1To10Test,teenSumTest,love6Test,lastDigitTest,answerCellTest,alarmClockTest,teaPartyTest,redTicketTest,greenTicketTest,squirrelPlayTest,caughtSpeedingTest,dateFashionTest,fizzString2Test,sodaPartyTest
